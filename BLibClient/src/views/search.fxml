@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.SearchController"
+      style="-fx-background-color: linear-gradient(to bottom, #a8edea, #fed6e3); -fx-padding: 20; -fx-border-radius: 10; -fx-background-radius: 10;">
+    
+    <!-- Back Arrow Button -->
+	<HBox alignment="CENTER_LEFT" spacing="10" prefWidth="800" fx:id="backToLoginContainer">
+    <Button text="&lt; Back to Login" onAction="#navigateToLogin"
+            style="-fx-background-color: transparent; -fx-font-size: 14px; -fx-text-fill: #0078d7; -fx-border-color: transparent;" />
+	</HBox>
+
+
+
+
+    <!-- Header Label -->
+    <Label text="Library Book Search" 
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333333; -fx-padding: 10; -fx-underline: true;" />
+
+    <!-- Search Field -->
+    <TextField fx:id="searchField" promptText="Search by title, author, or subject"
+               style="-fx-font-size: 14px; -fx-padding: 10; -fx-border-color: #0078d7; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+    <!-- Search Button -->
+    <Button text="Search" onAction="#performSearch" 
+            style="-fx-font-size: 16px; -fx-background-color: #0078d7; -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 10;" />
+
+    <!-- Results Table -->
+    <TableView fx:id="resultsTable" prefHeight="400" prefWidth="800" 
+               style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-radius: 10; -fx-background-radius: 10;">
+        <columns>
+            <TableColumn text="Title" fx:id="titleColumn" style="-fx-font-size: 14px; -fx-alignment: CENTER;" />
+            <TableColumn text="Author" fx:id="authorColumn" style="-fx-font-size: 14px; -fx-alignment: CENTER;" />
+            <TableColumn text="Subject" fx:id="subjectColumn" style="-fx-font-size: 14px; -fx-alignment: CENTER;" />
+            <TableColumn text="Available Copies" fx:id="availableCopiesColumn" 
+                         style="-fx-font-size: 14px; -fx-alignment: CENTER;" />
+            <TableColumn text="Location" fx:id="locationColumn" style="-fx-font-size: 14px; -fx-alignment: CENTER;" />
+            <TableColumn text="Nearest Return Date" fx:id="nearestReturnColumn" 
+                         style="-fx-font-size: 14px; -fx-alignment: CENTER;" />
+        </columns>
+    </TableView>
+
+    <!-- Footer Label -->
+    <Label text="Use the search bar to find books by title, author, or subject." 
+           style="-fx-font-size: 12px; -fx-text-fill: #666666;" />
+</VBox>
+
+

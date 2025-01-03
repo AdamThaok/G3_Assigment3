@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.SubscriberDashboardController"
+            style="-fx-background-color: linear-gradient(to bottom, #f5f7fa, #c3cfe2); -fx-padding: 10;">
+    
+    <!-- Header -->
+    <top>
+        <HBox spacing="20" alignment="CENTER" style="-fx-background-color: #0078d7; -fx-padding: 10;">
+            <Label text="Welcome, [Subscriber Name]!" 
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;" />
+            <Button text="Logout" onAction="#logout" 
+                    style="-fx-font-size: 14px; -fx-background-color: #ff4d4d; -fx-text-fill: white;" />
+        </HBox>
+    </top>
+    
+    <!-- Sidebar Navigation -->
+    <left>
+        <VBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #f0f0f0; -fx-padding: 10;">
+            <Button text="Search Books" onAction="#showSearchBooks" 
+                    style="-fx-font-size: 14px; -fx-background-color: #0078d7; -fx-text-fill: white;" />
+            <Button text="Borrowed Books" onAction="#showBorrowedBooks" 
+                    style="-fx-font-size: 14px; -fx-background-color: #0078d7; -fx-text-fill: white;" />
+            <Button text="Reservations" onAction="#showReservations" 
+                    style="-fx-font-size: 14px; -fx-background-color: #0078d7; -fx-text-fill: white;" />
+            <Button text="Notifications" onAction="#showNotifications" 
+                    style="-fx-font-size: 14px; -fx-background-color: #0078d7; -fx-text-fill: white;" />
+            <Button text="Account Info" onAction="#showAccountInfo" 
+                    style="-fx-font-size: 14px; -fx-background-color: #0078d7; -fx-text-fill: white;" />
+        </VBox>
+    </left>
+    
+    <!-- Main Content Area -->
+    <center>
+        <StackPane fx:id="mainContentArea" style="-fx-padding: 20;">
+            <Label text="Welcome to the Subscriber Dashboard! Use the menu on the left to navigate."
+                   style="-fx-font-size: 16px; -fx-text-fill: #333333;" />
+        </StackPane>
+    </center>
+
+</BorderPane>

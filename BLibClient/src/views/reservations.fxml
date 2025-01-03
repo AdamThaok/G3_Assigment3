@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.ReservationsController"
+      style="-fx-background-color: linear-gradient(to bottom, #e0c3fc, #8ec5fc); -fx-padding: 20;">
+    
+    <Label text="Book Orders" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+    
+    <TableView fx:id="ordersTable" prefHeight="400" prefWidth="800">
+        <columns>
+            <TableColumn text="Order ID" fx:id="orderIdColumn" />
+            <TableColumn text="Book ID" fx:id="bookIdColumn" />
+            <TableColumn text="Order Date" fx:id="orderDateColumn" />
+            <TableColumn text="Expiration Date" fx:id="expirationDateColumn" />
+            <TableColumn text="Status" fx:id="statusColumn" />
+            <TableColumn text="Actions" fx:id="actionsColumn" />
+        </columns>
+    </TableView>
+</VBox>
+

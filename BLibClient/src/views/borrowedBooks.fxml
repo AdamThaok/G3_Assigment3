@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.BorrowedBooksController"
+      style="-fx-background-color: linear-gradient(to bottom, #a8edea, #fed6e3); -fx-padding: 20;">
+    
+    <Label text="Borrowed Books" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+    
+    <TableView fx:id="borrowedBooksTable" prefHeight="400" prefWidth="800">
+        <columns>
+            <TableColumn text="Title" fx:id="titleColumn" />
+            <TableColumn text="Borrow Date" fx:id="borrowDateColumn" />
+            <TableColumn text="Due Date" fx:id="dueDateColumn" />
+            <TableColumn text="Status" fx:id="statusColumn" />
+        </columns>
+    </TableView>
+</VBox>

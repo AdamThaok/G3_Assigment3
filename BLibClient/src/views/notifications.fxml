@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.NotificationsController" spacing="20" alignment="CENTER"
+      style="-fx-padding: 20; -fx-background-color: linear-gradient(to bottom, #fdfbfb, #ebedee);">
+    
+    <!-- Header -->
+    <Label text="Notifications" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <!-- Notifications Table -->
+    <TableView fx:id="notificationsTable" prefHeight="400" prefWidth="600" style="-fx-border-color: #cccccc;">
+        <columns>
+            <TableColumn text="Message" fx:id="messageColumn" />
+            <TableColumn text="Time" fx:id="timeColumn" />
+            <TableColumn text="Method" fx:id="methodColumn" />
+        </columns>
+    </TableView>
+
+    <!-- Footer -->
+    <Button text="Back to Dashboard" onAction="#navigateToDashboard" 
+            style="-fx-background-color: #0078d7; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10; -fx-padding: 10;" />
+</VBox>

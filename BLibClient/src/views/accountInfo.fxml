@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.AccountInfoController"
+      style="-fx-padding: 20; -fx-background-color: linear-gradient(to bottom, #a8edea, #fed6e3);">
+    
+    <!-- Header -->
+    <Label text="Account Information" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <!-- Form -->
+    <VBox spacing="10" alignment="CENTER" maxWidth="300">
+        <Label text="Phone Number:" style="-fx-font-size: 14px;" />
+        <TextField fx:id="phoneNumberField" promptText="Enter phone number" style="-fx-font-size: 14px;" />
+        
+        <Label text="Email:" style="-fx-font-size: 14px;" />
+        <TextField fx:id="emailField" promptText="Enter email address" style="-fx-font-size: 14px;" />
+    </VBox>
+
+    <!-- Button -->
+    <Button text="Update Info" onAction="#handleUpdate" 
+            style="-fx-background-color: #0078d7; -fx-text-fill: white; -fx-font-size: 16; -fx-background-radius: 10;" />
+
+    <!-- Feedback Message -->
+    <Label fx:id="feedbackLabel" text="" style="-fx-font-size: 14px; -fx-text-fill: green;" />
+</VBox>
+
